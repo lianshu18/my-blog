@@ -1,0 +1,75 @@
+/* source/css/custom.css */
+
+/* 1. 彻底扒掉顶栏、底栏、和主题自带的背景，让全屏显示星球 */
+#web_bg,
+#page-header,
+#footer {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+body,
+html,
+#body-wrap,
+.layout {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 2. 重置暗黑模式基础色，确保不发灰 */
+:root[data-theme="dark"] {
+    --card-bg: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* 3. 卡片玻璃态 + 悬浮发光特效 */
+.card-widget,
+#recent-posts>.recent-post-item,
+.post,
+.page {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 243, 255, 0.15) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.card-widget:hover,
+#recent-posts>.recent-post-item:hover,
+.post:hover {
+    box-shadow: 0 0 16px rgba(0, 243, 255, 0.4), 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(0, 243, 255, 0.8) !important;
+    transform: translateY(-2px);
+}
+
+/* 4. 标题与链接荧光发光效果 */
+h1,
+h2,
+h3,
+#site-title {
+    text-shadow: 0 0 8px #c8ffff, 0 0 16px rgba(0, 243, 255, 0.3) !important;
+}
+
+a:hover {
+    text-shadow: 0 0 6px #c8ffff;
+    color: #c8ffff !important;
+}
+
+/* 5. 滚动条样式 */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#c8ffff, #ff00ff) !important;
+    border-radius: 4px;
+}
+
+/* 6. 代码块荧光边框 */
+.highlight {
+    border: 1px solid #c8ffff33 !important;
+    box-shadow: 0 0 8px #c8ffff22 !important;
+}
+
+/* 7. 强制网易云播放器显示在最顶层，绝对不被遮挡 */
+.aplayer {
+    z-index: 99999 !important;
+}
