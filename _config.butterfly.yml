@@ -20,7 +20,7 @@ nav:
 menu:
   主页: / || fas fa-home
   文章: /archives/ || fas fa-book
-  生活: /tags/生活/ || fas fa-heart
+  生活: /life/ || fas fa-heart
   我的画: /gallery/ || fas fa-palette
   朋友: /friends/ || fas fa-link
 # --------------------------------------
@@ -279,7 +279,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/lianshu18
   card_announcement:
     enable: false
     content: This is my Blog
@@ -1027,18 +1027,19 @@ inject:
     - '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">'
 
   bottom:
-    # ----- 播放器相关：顺序很重要！ -----
+     # 1. 先加载 APlayer 核心库 (你之前漏掉了这个)
+    - '<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>'
 
-    # 1.【关键】先声明新的API地址，必须在加载 MetingJS 库文件之前
-    - '<script>var meting_api="https://api.injahow.cn/meting/";</script>'
+    # 2. 声明 API 地址
+    - '<script>var meting_api="https://api.injahow.cn/meting/?server=:server&type=:type&id=:id&r=:r";</script>'
 
-    # 2. 再加载 MetingJS 库文件
+    # 3. 加载 MetingJS
     - '<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>'
 
-    # 3. 最后才是你的播放器标签
-    - '<meting-js server="netease" type="playlist" id="9093648389" fixed="true" autoplay="false" theme="#00f3ff"></meting-js>'
+    # 4. 播放器标签
+    - '<meting-js server="netease" type="playlist" id="9093648389" fixed="true" mini="true" autoplay="false" theme="#00f3ff" list-folded="true"></meting-js>'
 
-    # ----- 网站其他特效 -----
+    # 5. 其他特效
     - '<script defer src="/js/planet.js"></script>'
     - '<script defer src="/js/custom.js"></script>'
 # CDN Settings

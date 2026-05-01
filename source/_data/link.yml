@@ -1,8 +1,18 @@
 - class_name: 友情链接
-  class_desc: 一起学习的好友
+  class_desc: 一起学习的好友&&大佬
   link_list:
-    - name: 小明的博客
-      link: https://xiaoming.com
+    - name: colorskyfun
+      link: flakes.ink
+      descr: 彩天坊?!
 
-    - name: 小红
-      link: https://xiaohong.com
+    - name: tuf3i
+      link: blog.tuf3i.click
+      descr: t神, go领域大神
+
+    - name: met
+      link: https://met6.top/
+      descr: Stay Hungry. Stay Foolish. 求知若渴，大智若愚
+
+    - name: 0n1y - Blog
+      link: https://www.0n1y.org/
+      descr: 炼就坚持仙蛊

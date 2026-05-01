@@ -103,6 +103,7 @@ theme: butterfly
 deploy:
   type: ''
 
+# 找到这一段，确保配置如下
 aplayer:
   meting: true
-  asset_inject: false
+  asset_inject: false # 必须为 false，因为你在 inject 里手动加了

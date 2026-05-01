@@ -49,27 +49,36 @@ h1,
 h2,
 h3,
 #site-title {
-    text-shadow: 0 0 8px #c8ffff, 0 0 16px rgba(0, 243, 255, 0.3) !important;
+    text-shadow: 0 0 8px #00f3ff, 0 0 16px rgba(0, 243, 255, 0.3) !important;
 }
 
 a:hover {
-    text-shadow: 0 0 6px #c8ffff;
-    color: #c8ffff !important;
+    text-shadow: 0 0 6px #00f3ff;
+    color: #00f3ff !important;
 }
 
 /* 5. 滚动条样式 */
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#c8ffff, #ff00ff) !important;
+    background: linear-gradient(#00f3ff, #ff00ff) !important;
     border-radius: 4px;
 }
 
 /* 6. 代码块荧光边框 */
 .highlight {
-    border: 1px solid #c8ffff33 !important;
-    box-shadow: 0 0 8px #c8ffff22 !important;
+    border: 1px solid #00f3ff33 !important;
+    box-shadow: 0 0 8px #00f3ff22 !important;
 }
 
 /* 7. 强制网易云播放器显示在最顶层，绝对不被遮挡 */
 .aplayer {
     z-index: 99999 !important;
+}
+
+.flink-list .flink-list-item-avatar {
+    display: none !important;
+}
+
+.aplayer {
+    z-index: 99999 !important;
+    /* 确保它在星空背景和卡片之上 */
 }
