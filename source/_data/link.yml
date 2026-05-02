@@ -2,11 +2,11 @@
   class_desc: 一起学习的好友&&大佬
   link_list:
     - name: colorskyfun
-      link: flakes.ink
+      link: https://flakes.ink
       descr: 彩天坊?!
 
     - name: tuf3i
-      link: blog.tuf3i.click
+      link: https://blog.tuf3i.click
       descr: t神, go领域大神
 
     - name: met
